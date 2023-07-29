@@ -173,8 +173,6 @@ function App() {
     }
   }, [loggedIn]);
 
-  console.log(user);
-
   useEffect(() => {
     if (drone) {
       const room = drone.subscribe("observable-room");
@@ -198,7 +196,6 @@ function App() {
       });
     }
   }, [drone]);
-  console.log(user);
 
   const onSendMessage = (message) => {
     drone.publish({ room: "observable-room", message });

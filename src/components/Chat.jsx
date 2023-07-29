@@ -33,7 +33,7 @@ const Chat = ({ messages, trenutniUser, onSendMessage }) => {
         {messages.length > 0
           ? messages.map((message, index) => {
               const { user, text } = message;
-              console.log(user);
+
               const myMessage = user.id === trenutniUser.id;
               const className = myMessage ? "poruka mojaPoruka" : "poruka";
 
